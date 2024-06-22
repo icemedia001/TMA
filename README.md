@@ -1,73 +1,70 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Task Management Backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This project implements a backend server for a Task Management Application using NestJS and MongoDB.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Overview
 
-## Description
+The Task Management Backend provides a RESTful API for managing tasks. Users can perform CRUD operations (Create, Read, Update, Delete) on tasks stored in a MongoDB database.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Features
 
-## Installation
+- CRUD operations for tasks (Create, Read, Update, Delete)
+- MongoDB integration for data persistence
+- RESTful API endpoints for task management
 
-```bash
-$ npm install
-```
+## Technologies Used
 
-## Running the app
+- **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- **MongoDB**: A NoSQL database for storing tasks and their details.
+- **Mongoose**: An Object Data Modeling (ODM) library for MongoDB and Node.js.
 
-```bash
-# development
-$ npm run start
+## Setup Instructions
 
-# watch mode
-$ npm run start:dev
+To run this project locally, follow these steps:
 
-# production mode
-$ npm run start:prod
-```
+1. **Clone the repository**:
 
-## Test
+   ```bash
+   git clone https://github.com/icemedia001/tma.git
+   cd tma
+Install dependencies:
 
-```bash
-# unit tests
-$ npm run test
+bash
+Copy code
+npm install
+Set up environment variables:
 
-# e2e tests
-$ npm run test:e2e
+Create a .env file in the root of the project and add the following:
 
-# test coverage
-$ npm run test:cov
-```
+makefile
+Copy code
+PORT=3000
+MONGODB_URI=mongodb://localhost/tma
+Adjust MONGODB_URI if your MongoDB instance is hosted differently.
 
-## Support
+Start the server:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+bash
+Copy code
+npm run start
+This will start the server at http://localhost:3000.
 
-## Stay in touch
+API Endpoints
+The backend provides the following API endpoints:
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+GET /tasks: Fetch all tasks
+POST /tasks: Create a new task
+GET /tasks/
+: Fetch a task by ID
+PUT /tasks/
+: Update a task by ID
+DELETE /tasks/
+: Delete a task by ID
+Usage
+Ensure MongoDB is running (mongod command for local MongoDB instance).
+Use tools like Postman or curl to interact with the API endpoints.
+Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+License
+This project is licensed under the MIT License.
